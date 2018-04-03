@@ -9,7 +9,7 @@ gem 'rails4-autocomplete', '~> 1.1.0'
 
 gem 'devise'
 gem 'omniauth-facebook'
-
+gem 'puma'
 gem 'simple_form'
 gem 'haml-rails'
 gem 'activeadmin', github: 'gregbell/active_admin'
@@ -32,6 +32,12 @@ end
 group :development do 
   gem 'dotenv-rails'
   gem 'binding_of_caller'
+  gem 'capistrano', '3.6.1', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-rvm', require: false
+  gem 'capistrano3-puma', require: false
+  gem 'capistrano-ssh-doctor', require: false
 end
 
 group :development, :test do
