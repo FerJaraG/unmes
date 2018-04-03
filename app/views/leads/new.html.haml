@@ -1,0 +1,10 @@
+.well
+	.container
+		.row
+			.col-md-6.col-md-offset-3
+				.well{:style => "background-color:#fafafa"}
+					%h1 Inscríbete gratis para ver los primeros cursos 
+
+					= render 'form'
+
+					= link_to 'Volver', leads_path, :class => 'btn'

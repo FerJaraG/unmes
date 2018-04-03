@@ -1,0 +1,64 @@
+#bs-example-navbar-collapse-1 ul li.active a
+{
+	background-color: black;
+	color:white;
+}
+#bs-example-navbar-collapse-1 ul li a:hover
+{
+	color:orange;
+}
+
+.section
+{
+	padding:20px 0 20px 0;
+	font-family:Lato;
+}
+
+#landing-section-main
+{
+	text-align: center;
+	margin-top: 140px;
+}
+
+#landing-section-uvp
+{
+	border-bottom:solid 1px #eee;
+}
+
+.landing-title
+{
+	margin-top:0px; 
+	font-weight: 300;
+	font-size: 300%;
+	font-stretch: expanded;
+	color:#777;
+}
+
+.landing-subtitle
+{
+	font-weight: 300;
+	margin-top:30px; 
+	margin-bottom:30px; 
+	font-size:160%;
+	font-stretch: expanded;
+}
+
+.landing-btn
+{
+	white-space:normal; 
+	margin-right:5px;  
+	color:white;
+	border-radius: 2px;
+}
+
+.landing-btn-intro
+{
+	background-color:#eee;
+	color:#333;
+}
+
+.landing-btn-inscription
+{
+	background-color:#eee; 
+	color:#333;
+}

@@ -1,0 +1,77 @@
+.well
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        %h2{style: "text-align: center"} Construye tus prototipos webs
+        .well
+        
+          %form{action: "https://www.pagomaster.com/cl/cuenta/?cmd=checkout2", method: "post"}
+            %input{name: "merchantAccount", type: "hidden", value: "diego@en1mes.com"}/
+            %input{name: "amount", type: "hidden", value: "49990"}/
+            %input{name: "currency", type: "hidden", value: "CLP"}/
+            %input{name: "item_id", type: "hidden", value: "Taller online de Ruby on Rails"}/
+            %input{name: "setupFee", type: "hidden", value: ""}/
+            %input{name: "return_url", type: "hidden", value: "http://www.en1mes.com/workshops"}/
+            %input{name: "cancel_url", type: "hidden", value: "http://www.en1mes.com"}/
+            %input{name: "stopNumber", type: "hidden", value: ""}/
+            %input{name: "stopRecurring", type: "hidden", value: ""}/
+            %input{name: "durationType", type: "hidden", value: ""}/
+            %input{name: "duration", type: "hidden", value: ""}/
+            %input{name: "merchant_logo", type: "hidden", value: "https://trello-attachments.s3.amazonaws.com/5321620133e89183792cb68b/53682743e4ddb61f51e75cde/850x200/f5e994a719c70cffcfc56d93ebcf8953/banner_en1mes_copia.jpg"}/
+            %input{name: "addresscheckoutstep", type: "hidden", value: "0"}/
+            %input{name: "reselleraccount", type: "hidden", value: ""}/
+            %input{name: "ccSubscription", type: "hidden", value: ""}/
+            %input{name: "pst", type: "hidden", value: "1"}/
+            %input{name: "ipk", type: "hidden", value: "1"}/
+            %center
+              %input{name: "cartImage", src: "http://media-cache-ak0.pinimg.com/originals/61/b6/b7/61b6b79a3d0b0ab8deaa86abe3df6f0a.jpg", type: "image"}/ 
+          %h4{style: "text-align: center"}
+            Aprende con el apoyo de una comunidad y un profesor que responderán en todo momento!           
+        .row
+          .col-md-4
+            %img.img-responsive{src: "https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-prn2/t1.0-9/1185686_10151879423959797_360783554_n.jpg"}/
+          .col-md-8
+            %blockquote "Con todos estos conocimientos, hoy estoy desarrollando mi primera aplicación web para dos diseñadoras de joyas y accesorios.. " Federico Kunze - Estudiante Ingeniería UC
+        .row
+          .col-md-4
+            %img.img-responsive{src: "https://scontent-a-mia.xx.fbcdn.net/hphotos-prn1/t1.0-9/21159_10200303146396047_1661660564_n.jpg"}/
+          .col-md-8
+            %blockquote " ..hacer páginas web se veía demasiado dificil aprender todas esas cosas MUY complejas, hasta que me hablaron del curso y empecé el modo gratuito y podía entender TODO, Gonzalo, quien imparte el curso es un EXCELENTE profesor" Manuel Alfaro - Potencial Desarrollador
+
+        .row
+          .col-md-4
+            %img.img-responsive{src: "https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash4/t1.0-9/2074_52128395717_825_n.jpg"}/
+          .col-md-8
+            %blockquote "Ahora entiendo y comprendo a mis desarrolladores gracias al curso, además contraté un practicante que tomo el taller conmigo" León Gleiser -Fundador de Polisofía
+        .well
+          
+                          
+          %form{action: "https://www.pagomaster.com/cl/cuenta/?cmd=checkout2", method: "post"}
+            %input{name: "merchantAccount", type: "hidden", value: "diego@en1mes.com"}/
+            %input{name: "amount", type: "hidden", value: "49990"}/
+            %input{name: "currency", type: "hidden", value: "CLP"}/
+            %input{name: "item_id", type: "hidden", value: "Taller online de Ruby on Rails"}/
+            %input{name: "setupFee", type: "hidden", value: ""}/
+            %input{name: "return_url", type: "hidden", value: "http://www.en1mes.com/workshops"}/
+            %input{name: "cancel_url", type: "hidden", value: "http://www.en1mes.com"}/
+            %input{name: "stopNumber", type: "hidden", value: ""}/
+            %input{name: "stopRecurring", type: "hidden", value: ""}/
+            %input{name: "durationType", type: "hidden", value: ""}/
+            %input{name: "duration", type: "hidden", value: ""}/
+            %input{name: "merchant_logo", type: "hidden", value: "https://trello-attachments.s3.amazonaws.com/5321620133e89183792cb68b/53682743e4ddb61f51e75cde/850x200/f5e994a719c70cffcfc56d93ebcf8953/banner_en1mes_copia.jpg"}/
+            %input{name: "addresscheckoutstep", type: "hidden", value: "0"}/
+            %input{name: "reselleraccount", type: "hidden", value: ""}/
+            %input{name: "ccSubscription", type: "hidden", value: ""}/
+            %input{name: "pst", type: "hidden", value: "1"}/
+            %input{name: "ipk", type: "hidden", value: "1"}/
+            %center
+              %input{name: "cartImage", src: "http://media-cache-ak0.pinimg.com/originals/61/b6/b7/61b6b79a3d0b0ab8deaa86abe3df6f0a.jpg", type: "image"}/            
+
+.container
+  .row
+    .col-md-6.col-md-offset-3
+      %p
+        Tienes dudas, pregúntanos, te podemos ayudar.
+        escríbe a 
+        =mail_to("diego@en1mes.com")
+        +56 9024 0620

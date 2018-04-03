@@ -1,0 +1,29 @@
+= form_for (@lead), :html =>{:class=>  'form'} do |f|
+  - if @lead.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@lead.errors.count, "error")} prohibited this lead from being saved:"
+      %ul
+        - @lead.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    .field
+      = f.label :name, "Nombre Completo"
+      = f.text_field :name, :class => 'form-control'
+  .form-group
+    .field
+      = f.label :email, "Email"
+      = f.text_field :email, :class => 'form-control'
+
+  .form-group
+    .field
+      = f.label :phone, "Teléfono de contacto"
+      = f.text_field :phone, :class => 'form-control'
+  .form-group
+    .field
+      = f.label :promotional_code, "Código promocional"
+      = f.text_field :promotional_code, :value => @promotional_code, :class => 'form-control'
+
+  .form-group
+    .actions
+      = f.submit 'Inscríbeme', :class => 'btn btn-primary'

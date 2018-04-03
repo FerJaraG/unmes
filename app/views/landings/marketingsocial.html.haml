@@ -1,0 +1,28 @@
+= render "backstretch"
+.row{:style => 'margin-top:20px'}
+  .col-md-5.col-md-offset-1
+    .well{:style => 'background-color:black; background-color:rgba(30,30,30,0.8); border:none'}
+      %h1{:style => 'color:white'} Crea tus propias páginas web
+      %hr{:style => 'border-color:#666'}
+
+      %p{:style => 'color:#ccc; margin-top:30px; font-size: 25px; text-align: justify'} 
+        %ul{:style => 'color:#ccc; margin-top:30px; font-size: 21px; text-align: justify'}
+          %li Aprende online en menos de 4 horas
+          %li Ten tú el control de tu web
+          %li Sin requisitos previos
+          %li Único requisito es un computador y las ganas
+        
+      
+        %span{:style => 'color:orange; margin-top:18px; font-size: 20px; text-align:center'} Sólo 12 cupos, asegura el tuyo. 
+        
+        %br
+          %br
+            %strong{:style => 'color:#ccc; margin-top:18px; font-size: 20px; text-align: justify'} Inscríbete ya! Asegura tu cupo y recibe más información
+       
+
+      = render "inscription_form_marketingsocial"
+
+:javascript
+  $.backstretch(["#{asset_path('damian3.jpg')}"]);
+
+  

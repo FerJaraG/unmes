@@ -1,0 +1,66 @@
+.container{:style => 'margin-top:20px'}
+	.row
+		.col-md-7
+			%h3 8 Ideas geniales para tu Web
+
+			<iframe src="http://www.slideshare.net/slideshow/embed_code/29189629" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+
+			%hr
+			%h3
+				Casos de éxito
+			%p
+				Hemos actualizado los casos de éxito, revisa si estas en la 
+				=link_to("lista", casos_path)
+
+			%hr
+
+			%h3
+				Todas las etiquetas de HTML 
+
+			%p
+				aquí les dejamos un 
+				%a{:href=>"http://overapi.com/html/"} listado 
+				de todas las etiquetas HTML habidas por haber.
+			%hr
+
+			%h3 ¿Cómo aprender Ruby de forma interactiva?
+			%p Este es un muy buen tutorial en inglés para aprender a lo básico de Ruby y de esta forma conseguir sacarle más provecho a lo que sabes de Ruby on Rails.
+			%a{:href => "http://tryruby.org/"} TryRuby
+
+			%hr
+
+			%h3 ¿El mejor tutorial de ruby?
+			%p 
+				Después de mucho investigar en la web preguntándome cual era el mejor tutorial para aprender Ruby, llegué al de Cris Pine, llamado simplemente, "Aprende a programar".
+			%p
+				Este tutorial se encuentra disponible gratis en: 
+				%a{:href=>"http://pine.fm/LearnToProgram/?Chapter=00"} pine.fm
+
+
+			%hr
+
+			%h3 ¿Qué cosas entretenidas se pueden hacer con Ruby on Rails?
+			%p Existen muchas gemas entretenidas y muy poderosas en Ruby on Rails que te permiten hacer cosas muy poderosas con muy poco esfuerzo, como por ejemplo:
+			%ul
+				%li 
+					%a{:href => "http://railscasts.com/episodes/209-introducing-devise"} Devise, autenticación de usuarios
+				%li 
+					%a{:href => "http://railscasts.com/episodes/360-facebook-authentication"} Omniauth e integración con Facebook
+				%li 
+					%a{:herf => "http://railscasts.com/episodes/284-active-admin"}
+						Activeadmin, gema para crear dashboards de administradores
+				%li
+					%a{:href => "http://railscasts.com/episodes/213-calendars"} 
+						Calendar, gemas para manejo de calendario
+
+			%p 
+				puedes ver estas y muchas más en 
+				%a{:href => "http://railscasts.com/"} Railscasts
+			%hr
+		.col-md-5{:style => 'margin-top:30px'}
+			<a class="twitter-timeline" href="https://twitter.com/en1mes" data-widget-id="416795891610034176">Tweets by @en1mes</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+}
+
+

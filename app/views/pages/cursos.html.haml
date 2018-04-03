@@ -1,0 +1,293 @@
+!!!
+%html
+  %head
+    %title En1mes
+    %meta{charset: "utf-8"}/
+    / Latest compiled and minified CSS
+
+    = javascript_include_tag "application"
+
+    %link{href: "http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", rel: "stylesheet"}/
+    / Optional theme
+    %link{href: "http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css", rel: "stylesheet"}/
+    
+    / Latest compiled and minified JavaScript
+    %script{src: "http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"}
+    
+    %link{href: "http://fonts.googleapis.com/css?family=Roboto:400,700", rel: "stylesheet", type: "text/css"}
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+
+    :css
+      body{
+        font-family: 'Roboto Slab', serif; 
+      }
+      h1,h2{
+        font-size:300%; 
+        font-weight:700
+      }
+      h2{
+        font-size:200%;
+        font-weight: 400;
+      }
+      #main-pic, #side-pics{
+        padding:0px;
+      }
+
+  %body 
+    %section{:style => "background: url()) no-repeat center center fixed;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"}
+      .layer{:style => "background-color:rgba(255,255,255,0.8); padding:100px 60px 100px 60px"}
+        %header{:style => 'text-align:center'}
+          %h1{:style => 'color:#222;'} La programación no es el futuro, es el presente.
+
+          %h2 Nosotros podemos enseñarte.
+      %hr
+
+    .container{:style => 'padding-top:50px'}
+      .row
+        .col-md-4.col-sm-4
+          %h4{:style => 'text-align:center; padding-bottom:10px'}
+            Emprende en el mundo digital
+
+          =image_tag("landing/requisitos.jpg", :class => 'img-responsive')
+          
+          %p{:style => 'margin-top:10px'} Todo lo que necesitas para hacer negocios con todo el mundo es un computador y las ganas de aprender.         
+
+        .col-md-4.col-sm-4
+          %h4{:style => 'text-align:center; padding-bottom:10px'}
+            Empieza desde cero
+
+          =image_tag("landing/html-desde-cero.jpg", :class => 'img-responsive')
+          %p{:style => 'margin-top:10px'}  Parte con los cursos más sencillos y pronto podrás tomar los más complejos y construir aplicaciones web 
+        
+        .col-md-4.col-sm-4
+          %h4{:style => 'text-align:center; padding-bottom:10px'}
+            Ve la matrix
+
+          =image_tag("landing/ver-la-matrix.jpg", :class => 'img-responsive')
+
+          %p{:style => 'margin-top:10px'} Con nuestros cursos aprenderás a leer y escribir código, y una vez que sabes programar el mundo no tiene límites 
+          /.btn.btn-primary.btn-large{:style => 'border-radius:1px'}                      
+          /=link_to("Empieza Ya!", my_courses_courses_path, :style=> 'color:white;')
+    }
+      
+    / / Descripcion de la pagina
+    / %section.container{:style => 'padding-top:50px'}
+    /   %h1 Tenemos una receta para enseñar 
+    /   .row{:style => 'padding-top:50px'}
+    /     / Primera Columna
+    /     .col-md-3
+    /       %p{:style => "text-align:center"}
+    /         %span.glyphicon.glyphicon-magnet.descripcion
+    /       %p
+    /         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    /         tempor incididunt ut labore et dolore magna aliqua.
+    /     / Segunda Columna
+    /     .col-md-3
+    /       %p{:style => "text-align:center"}
+    /         %span.glyphicon.glyphicon-comment.descripcion
+    /       %p
+    /         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    /         tempor incididunt ut labore et dolore magna aliqua.
+    /     / Tercera Columna
+    /     .col-md-3
+    /       %p{:style => "text-align:center"}
+    /         %span.glyphicon.glyphicon-shopping-cart.descripcion
+    /       %p
+    /         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    /         tempor incididunt ut labore et dolore magna aliqua.
+    /     / Cuarta Columna
+    /     .col-md-3
+    /       %p{:style => "text-align:center"}
+    /         %span.glyphicon.glyphicon-dashboard.descripcion
+    /       %p
+    /         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    /         tempor incididunt ut labore et dolore magna aliqua.
+    
+
+    %section.container{:style => 'margin-top:100px'} 
+      %header
+        %h1{:style => 'text-align:center'} Nuestros cursos
+      .row
+        .col-md-6
+          %header
+            %h3 Talleres Presenciales
+          %section#imagebox1.imagebox
+            =link_to(image_tag("7-android-presencial.jpg", :class => 'img-responsive'), "http://juegosandroid.en1mes.com");
+            #slidingbox1.slidingbox
+              %h4 Construye Juegos Para Android                        
+              %p Aprende a hacer juegos como Flappy Bird, plataforma, Tower Defense, naves, y juegos de pelea entre otros.
+          
+            
+          %section#imagebox2.imagebox{:style => 'margin-top:20px'}
+            =link_to(image_tag("2-presencial-rails-b.jpg", :class => 'img-responsive'), "http://ror4.en1mes.com")
+            #slidingbox2.slidingbox
+              %h4 Construye aplicaciones web con Ruby on rails.                      
+              %p Aprenderás construyendo un Pinterest, con este curso podrás construir prototipos digitales de forma muy rápida para validar tus proyectos.
+
+
+          %section#imagebox3.imagebox{:style => 'margin-top:20px'}
+            =link_to(image_tag("9-presencial-html.jpg", :class => 'img-responsive'), "http://desafiostgo.en1mes.com/")
+            #slidingbox3.slidingbox
+              %h4 Aprende el código que hay detrás de las páginas web.                  
+              %p Con este curso pensando para diseñadores gráficos podrás construir páginas web desde cero y tener la capacidad de modificarlas cuando quieras.
+
+
+          %section#imagebox8.imagebox{:style => 'margin-top:20px'}
+            =link_to(image_tag("8-presencial-wordpress.jpg", :class => 'img-responsive'), 'http://wordpress.en1mes.com/')
+            #slidingbox8.slidingbox
+              %h4 Wordpress Presencial
+              %p Aprende a crear páginas web autoadministrables y blogs con todo el poder de Wordpress 
+
+        .col-md-6
+          %header
+            %h3 Cursos Online
+          %section#imagebox5.imagebox
+            =link_to(image_tag("5-online-rails.jpg", :class => 'img-responsive'), course_chapters_path(Course.find(1)));
+            #slidingbox5.slidingbox
+              %h4 Ruby on Rails online                          
+              %p Construye aplicaciones web desde la comidad de tu casa
+
+   
+          %section#imagebox6.imagebox{:style => 'margin-top:20px'}
+            =link_to(image_tag("4-online-html.jpg", :class => 'img-responsive'), course_chapters_path(Course.find(3)))
+            #slidingbox6.slidingbox
+              %h4 HTML online
+              %p  Aprende a hacer y maquetear páginas responsivas web con HTML, CSS y Bootstrap
+
+          %section#imagebox7.imagebox{:style => 'margin-top:20px'}
+            =link_to(image_tag("10-online-wordpress.jpg", :class => 'img-responsive'),  course_chapters_path(Course.find(2)))
+            #slidingbox7.slidingbox
+              %h4 Wordpress Online
+              %p Aprende a crear páginas web autoadministrables y blogs con todo el poder de Wordpress 
+
+          %section{:style => 'margin-top:20px'}
+            .well
+              %h4 No sabes por donde empezar?
+
+              = link_to "Revisa esta guía", guia_path
+  %hr
+    .row
+      .col-md-6.col-md-offset-3
+        %section#imagebox4.imagebox{:style => 'margin-top:20px'}
+          =image_tag("6-phonegap-presencial.jpg", :class => 'img-responsive')
+          #slidingbox4.slidingbox
+            %h4 Construye aplicaciones híbridas para celulares    
+            %p Aprovecha toda la potencia de HTML y javascript para construir aplicaciones que se vean como nativas en un smartphone.
+
+
+  #casos.jumbotron{style: "margin:100px 0 50px 0; padding-bottom:50px; background-color: #112733; border: solid 1px #eee;"}
+    %h1{style: "color:#E9E9E9; padding:20px 0 40px 0"} Casos de éxito
+
+    .row
+      .col-md-4
+        %h4= link_to("Penzipet", "http://penzipet.herokuapp.com/")
+        = link_to(image_tag("casos/penzipet.png", :class => 'img-responsive'), "http://penzipet.herokuapp.com/")
+      .col-md-4
+        %h4= link_to("Kullmer & Young ", "http://kullmer-young.herokuapp.com/")
+        = link_to(image_tag("casos/kullmer.png", :class => 'img-responsive'), "http://kullmer-young.herokuapp.com/")
+      .col-md-4
+        %h4= link_to("AutoBroker", "http://www.autobroker.cl")
+        = link_to(image_tag("casos/autobroker.png", :class => 'img-responsive'),  "http://www.autobroker.cl")
+
+    .row
+      .col-md-4
+        %h4= link_to("Lean Startup Machine", "http://www.lsm.cl")
+        = link_to(image_tag("casos/lsm.png", :class => 'img-responsive'), "http://www.lsm.cl")
+      .col-md-4
+        %h4= link_to("Wolf Latam", "http://penzipet.herokuapp.com/")
+        =image_tag("casos/wolf.png", :class => 'img-responsive')
+      .col-md-4
+        %h4= link_to("Kid Stories", "http://www.wolflatam.com/")
+        = link_to(image_tag("casos/kidsstories.png", :class => 'img-responsive'), "http://www.wolflatam.cl")
+
+  .container{style: "text-align:center; margin-top:80px"}
+    .row
+      .col-md-10.col-md-offset-1
+        %h2{:style => 'font-size:250%'} Nuestro Secreto para enseñar
+        %p{:style => 'font-size:130%'} Nuestro secreto es explicar las cosas como son, sabemos que quieres aprender de forma entretenida y didáctica. Explicamos todo con manzanita pero de forma rápida y sin entrar a explicar cosas
+
+  #testimonios.jumbotron{style: "margin:100px 0 50px 0; padding-bottom:50px; background-color: #112733; border: solid 1px #eee;"}
+    %h1{style: "font-family: 'Lato', sans-serif;font-weight: 700; text-align:center; font-weight: 400; text-align:center; font-size:52px; padding-bottom:80px; color:#E9E9E9"} Testimonios
+    #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+      / Indicators
+      %ol.carousel-indicators
+        %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+        %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+        %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+      / Wrapper for slides
+      .carousel-inner
+        .item.active{style: "text-align:center"}
+          %iframe{allowfullscreen: "", frameborder: "0", height: "450", mozallowfullscreen: "", src: "http://player.vimeo.com/video/88658261", webkitallowfullscreen: "", width: "800"}
+        .item{style: "text-align:center"}
+          %iframe{allowfullscreen: "", frameborder: "0", height: "450", mozallowfullscreen: "", src: "http://player.vimeo.com/video/88652974", webkitallowfullscreen: "", width: "800"}
+        .item{style: "text-align:center"}
+          %iframe{allowfullscreen: "", frameborder: "0", height: "450", mozallowfullscreen: "", src: "http://player.vimeo.com/video/88662363", webkitallowfullscreen: "", width: "800"}
+      / Controls
+      %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-example-generic", style: "background-image:url()"}
+        %span.glyphicon.glyphicon-chevron-left
+      %a.right.carousel-control{"data-slide" => "next", href: "#carousel-example-generic", style: "background-image:url()"}
+        %span.glyphicon.glyphicon-chevron-right{style: "background-image:url()"}
+
+
+  #calendario.container
+    .row
+      .col-md-10.col-md-offset-1
+        .page-header
+          %h2{style: "text-align:center; margin-bottom:40px"} 
+            Calendario de actvidades 
+            .small
+              %a{href: "http://www.meetup.com/En1Mes-aprende-y-emprende/", target: "_blank"} 
+                Inscríbete en nuestras charlas gratuitas
+
+        %iframe{frameborder: "0", height: "600", scrolling: "no", src: "https://www.google.com/calendar/embed?src=69188ld3ajpsnulc5i0ku3oaec%40group.calendar.google.com&ctz=America/Santiago", style: "border: 0", width: "100%"}
+        %p{style: "text-align:center; margin-top:50px"}
+
+
+  #partners.jumbotron{style: "margin:100px 0 50px 0; padding-bottom:50px; background-color: #112733; border: solid 1px #eee;"}
+    .row
+      .col-md-3
+        .thumbnail{:style => 'border-radius:0px'}
+          Getonoboard
+          =image_tag("partners/getonboard.png")
+      .col-md-3
+        .thumbnail{:style => 'border-radius:0px'}
+          Chrysalis
+          =image_tag("partners/chrysalis.jpg")
+      .col-md-3
+        .thumbnail{:style => 'border-radius:0px'}
+          BombaCamp
+          =image_tag("partners/bombacamp.png")
+      .col-md-3
+        .thumbnail{:style => 'border-radius:0px'}
+          Asech
+          =image_tag("partners/asech.jpg")
+
+  #somos.container{style: "padding-top:50px"}
+    .well-mine{style: "background-color:#fff; border:none; background-color:#fff"}
+      .col-md-10.col-md-offset-1
+        .page-header
+          %h2 ¿Quienes Somos?
+      .row
+        .col-md-5.col-md-offset-1
+          .thumbnail
+            %a{href: "http://www.linkedin.com/profile/view?id=147664636&trk=nav_responsive_tab_profile_pic"}
+              %img.img-responsive{alt: "Gonzalo", src: "http://www.mootree.com/assets/gonzalo-f199d8ec5dbe378de154e5718fedc56f.jpg"}/
+              %h3 Gonzalo Sánchez
+            %a{href: "https://twitter.com/gsanchezd"}
+              %h4 @gsanchezd
+            %p Ingeniero Civil Informático
+            %p Especializado en Desarrollado de aplicaciones web
+            %p Mentor de @en1mes, Profesor de ruby on rails, desarrollador de varias aplicaciones web como LetsMaked FollowAPP y Como en tu Casa
+        .col-md-5
+          .thumbnail
+            %a{href: "http://www.linkedin.com/profile/view?id=88469732&locale=es_ES&trk=tyah&trkInfo=tas%3Adiego%20ar%2Cidx%3A1-1-1"}
+              %img.img-responsive{alt: "Diego", src: "https://s3.amazonaws.com/html5.en1mes/foto_diego.jpeg"}/
+              %h3 Diego Arias
+            %a{href: "https://twitter.com/diegoiag"}
+              %h4 @diegoiag
+
+            %p Ingeniero Civil Industrial
+            %p Emprendedor altamente motivado, con foco en el area Dígital
+            %p Encargado de la satisfacción de clientes y del area de Marketing
+

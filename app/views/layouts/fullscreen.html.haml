@@ -1,0 +1,28 @@
+%html{lang: "es"}
+  %head
+    = favicon_link_tag 
+
+    %title En 1 Mes
+
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = include_gon 
+
+    - if Rails.env.production?
+      = render 'layouts/analytics' 
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta content="Un taller paso a paso para aprender marketing social en menos de un mes" name="description">
+
+    = yield :javascript
+
+  %body
+
+    .wrapper
+      - flash.each do |name, msg|
+        = content_tag(:div, msg, class: "alert alert-#{name}")
+
+      = yield
+

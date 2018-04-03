@@ -1,0 +1,18 @@
+.container{:style => 'margin-top:30px'}
+	.row
+		%h2 Tus cursos
+		- @my_courses.each do |c|
+			.col-md-3
+				%a{:href => course_chapters_path(c)}
+					= image_tag(c.photo, :class => 'img-responsive')
+					%h5{:style => 'text-align:center'}= c.name
+
+	
+	%hr
+	.row
+		%h2 Otros cursos
+		- @other_courses.each do |c|
+			.col-md-3
+				%a{:href => course_inscriptions_path(c), :'data-method' => :POST}
+					= image_tag(c.photo, :class => 'img-responsive')
+					%h5{:style => 'text-align:center'}= c.name

@@ -1,0 +1,80 @@
+asd 
+.container{:style => 'margin:30px 0 30px 0'}
+	.row
+		.col-md-6
+			%form
+				%label{:name => 'q'} Buscar
+				%input{:name => 'q'}
+
+	.row
+		.col-md-6
+			%h1{:style => 'color:#555; font-family:lato'} Talleres
+			%ol{:start=>"#{(10 * (@page - 1)) + 1}"}
+				- @workshops.each do |w|			
+					- if w.public? 
+						%li
+							%span.label.label-success= "Gratis" 		
+							= link_to(w.name, workshop_path(w), :style => 'color:green')
+							- if w.consumed_by(current_user)
+								%i.glyphicon.glyphicon-ok{:style => 'color:gray'}
+
+							%p= w.description
+
+					-else
+						- if current_user && current_user.paid?
+							%li
+								= link_to(w.name, workshop_path(w), :style => 'color:green')
+								- if w.consumed_by(current_user)
+									%i.glyphicon.glyphicon-ok{:style => 'color:gray'}
+
+								%p= w.description
+
+						- else
+							%li= w.name
+							%p= w.description
+					%hr
+	
+		.col-md-4.col-md-offset-1
+			- unless current_user.paid?
+				%h3 Toma el curso completo y aprende a construir tus prototipos webs
+
+				%hr 
+				.row
+					.col-md-6
+						%p compra en dólares
+						= render 'users/paypal'
+					.col-md-6
+						%p compra en pesos
+						= render 'users/pagomaster'
+				%hr 
+
+				%p
+					Dudas puedes contactarnos por
+					twitter: @en1mes
+					facebook: https://www.facebook.com/en1mes
+
+				.row
+					.col-md-4
+						%img.img-responsive{src: "https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-prn2/t1.0-9/1185686_10151879423959797_360783554_n.jpg"}/
+					.col-md-8
+						%p "Con todos estos conocimientos, hoy estoy desarrollando mi primera aplicación web para dos diseñadoras de joyas y accesorios.. " Federico Kunze - Estudiante Ingeniería UC
+				.row{:style => 'margin-top:20px'}
+					.col-md-4
+						%img.img-responsive{src: "https://scontent-a-mia.xx.fbcdn.net/hphotos-prn1/t1.0-9/21159_10200303146396047_1661660564_n.jpg"}/
+					.col-md-8
+						" ..hacer páginas web se veía demasiado dificil aprender todas esas cosas MUY complejas, hasta que me hablaron del curso y empecé el modo gratuito y podía entender TODO, Gonzalo, quien imparte el curso es un EXCELENTE profesor" Manuel Alfaro - Potencial Desarrollador
+
+				.row{:style => 'margin-top:20px'}
+					.col-md-4
+						%img.img-responsive{src: "https://scontent-b-mia.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/10460493_10152129569525718_6807839639840665585_n.jpg?oh=cd924887acb09124c45f265d479be040&oe=5438AC02"}/
+					.col-md-8
+						"Ahora entiendo y comprendo a mis desarrolladores gracias al curso, además contraté un practicante que tomo el taller conmigo" León Gleiser -Fundador de Polisofía
+						
+														
+						 
+
+
+	.apple_pagination
+		= paginate @workshops 
+
+

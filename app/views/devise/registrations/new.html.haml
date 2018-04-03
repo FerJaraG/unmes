@@ -1,0 +1,60 @@
+- content_for :page_title do
+  Empieza a crear tu aplicación web desde cero.
+
+.container{:style => 'margin-top:80px;'}
+  .row
+    .col-md-8.col-md-offset-2
+      %section
+        %header
+          %h1{:style=>''} Regístrate y a accede a nuestros cursos
+      %hr
+      = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form'}) do |f|
+
+        -if resource.errors.any?
+          .well{:style => 'background-color:#ccc'}
+            = f.error_notification
+            = resource.errors.full_messages.map { |msg| content_tag(:li, msg) }.join.html_safe
+        .form-group
+          .field
+            = f.label :name, "Nombre completo"
+            = f.text_field :name, :class => 'form-control', :style => 'border-radius:0px'
+
+        .form-group
+          .field
+            = f.label :email, "Email"
+            = f.email_field :email, :class => 'form-control', :style => 'border-radius:0px'
+
+        .form-group
+          .field
+            = f.label :phone, "Teléfono de contacto"
+            = f.phone_field :phone, :class => 'form-control', :style => 'border-radius:0px'
+
+        .form-group
+          .field
+            = f.label :password, "Password"
+            = f.password_field :password, :class => 'form-control', :style => 'border-radius:0px'
+
+        .form-actions{:style => 'margin-top:20px; text-align:center'}
+          = f.submit "Inscríbete", class: "btn btn-success", :style => 'border-radius:1px'
+          .btn.btn-primary{:style => 'border-radius:1px'}
+            = render "devise/shared/links"
+          
+
+ 
+          
+/ Facebook Conversion Code for E1M: Entro a Sign Up
+:javascript
+  var fb_param = {};
+  fb_param.pixel_id = '6014136238165';
+  fb_param.value = '0.00';
+  fb_param.currency = 'USD';
+  (function(){
+    var fpw = document.createElement('script');
+    fpw.async = true;
+    fpw.src = '//connect.facebook.net/en_US/fp.js';
+    var ref = document.getElementsByTagName('script')[0];
+    ref.parentNode.insertBefore(fpw, ref);
+  })();
+
+%noscript
+  %img{:alt => "", :height => "1", :src => "https://www.facebook.com/offsite_event.php?id=6014136238165&amp;value=0&amp;currency=USD", :style => "display:none", :width => "1"}/

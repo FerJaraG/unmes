@@ -1,0 +1,35 @@
+.container{:style => "margin-top:60px"}
+  .row
+    .col-md-8.col-md-offset-2
+      %section  
+        %header{:style => 'padding-bottom:30px'}
+          %h1 Ingresa para ver todo el contenido que tenemos para ti.
+        
+        %hr 
+        
+        .row
+          .col-md-6
+            .box{:style => 'border-right:1px solid #dedede; padding-right:30px'}
+              = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+                %fieldset
+                  .form-group
+                    = f.label :email, class: "control-label", :style => 'color:#333'
+                    = f.email_field :email, class: "text-field form-control", style:"border-radius:1px", html: {spellcheck: "false"}
+                  .form-group
+                    = f.label :password, class: "control-label", :style => 'color:#333'
+                    = f.password_field :password, class: "text-field form-control", style:"border-radius:1px", html: {autocomplete: "off"}
+                  - if devise_mapping.rememberable?
+                    .form-group
+                      = f.label :remember_me, "Recuérdame", class: "control-label", :style => 'color:#333'
+                      = f.check_box :remember_me
+                  %input.btn.btn-lg.btn-success.col-md-12{:style => "border-radius:0px; ", :type => "submit", :value => "Ingresa"}/
+          
+
+          .col-md-6
+            %h4{:style => "text-align:center; padding:5px 20px 20px 20px; color:#333"} No tienes cuenta?
+
+            %a.btn.btn-lg.btn-facebook.col-md-6{:href => omniauth_authorize_path(resource_name, :facebook), :style => "border-radius:0px; background-color:#354B8E; color:white", :value => "Login via facebook"} Facebook
+            
+            = link_to "Regístrate", new_registration_path(resource_name), :class => 'btn btn-lg btn-warning col-md-6', :style=>"border-radius:0px"
+            %br/
+

@@ -1,0 +1,22 @@
+= render "backstretch"
+.row{:style => 'margin-top:20px'}
+  .col-md-6.col-md-offset-5
+    .well{:style => 'background-color:black; background-color:rgba(60, 60, 60, 0.6); border:none'}
+      %h1{:style => 'color:white; text-align:center'} Taller de verano de desarrollo web para niños
+      %hr{:style => 'border-color:#666'}
+      %h5{:style => 'color:ddd; text-align:center'} Para niños de Sexto a Octavo Básico (Quedan 6 cupos disponibles)
+
+      %p{:style => 'color:white; margin-top:30px; text-align:center'} 
+        Por que tu hijo podría ser el creador del próximo facebook. Taller del 13 al 31 de enero. 
+        Lugar: Los Militares 6191, Las Condes.
+
+
+      %hr{:style => 'border-color:#666; margin-top:30px'}
+
+      .row
+        .col-md-9.col-md-offset-1
+          = render "inscription_form_jovenes"
+
+:javascript
+  $.backstretch(["#{asset_path('pedro.jpg')}"]);
+

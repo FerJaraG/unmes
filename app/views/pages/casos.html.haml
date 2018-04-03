@@ -1,0 +1,15 @@
+
+.container
+	.page-header
+		%h1 Aplicaciones webs de algunos alumnos de En1Mes
+
+	.row{:style => 'margin-top:20px'}
+		=render :partial => 'caso', :locals => @casos[0]
+		=render :partial => 'caso', :locals => @casos[1]
+		=render :partial => 'caso', :locals => @casos[2]
+
+	.row{:style => 'margin-top:20px'}
+		=render :partial => 'caso', :locals => @casos[3]
+		=render :partial => 'caso', :locals => @casos[4]
+
+

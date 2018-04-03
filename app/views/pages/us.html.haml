@@ -1,0 +1,31 @@
+.container
+  .page-header
+    %h1 Quienes somos:
+  .row
+    .col-md-4.col-md-offset-1
+      %div{itemscope: "", itemtype: "http://data-vocabulary.org/Person"}
+        =image_tag("gonzalo.jpeg", :class=>"img-responsive img-rounded")
+        %center
+          %span{itemprop: "name"} Gonzalo Sánchez
+          %br
+          %span{itemprop: "title"} Ingeniero Civil Informático
+      
+          %br
+          Mentor de
+          %span{itemprop: "affiliation"} 
+            %a{href: "http://www.en1mes.com", itemprop: "url"} En1Mes
+
+    .col-md-4.col-md-offset-1
+      =image_tag("diego.png", :class=>"img-responsive img-rounded")
+
+      %div{itemscope: "", itemtype: "http://data-vocabulary.org/Person"}
+        %center
+          %span{itemprop: "name"} Diego Arias
+          %br
+          %span{itemprop: "title"} Ingeniero Civil Industrial
+         
+          %br
+          Mentor de Lean Startup Machine y 
+          %span{itemprop: "affiliation"} 
+            %a{href: "http://www.En1mes.com", itemprop: "url"} En1Mes
+    

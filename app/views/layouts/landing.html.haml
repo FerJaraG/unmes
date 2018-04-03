@@ -1,0 +1,221 @@
+%html{lang: "es"}
+  %head
+    = favicon_link_tag "#{asset_path('favicon.ico')}"
+    = favicon_link_tag "#{asset_path('favicon.ico')}", rel: 'apple-touch-icon', type: 'image/png'
+
+    %title= content_for?(:page_title) ? yield(:page_title) : "En 1 mes" 
+
+    / Latest compiled and minified CSS
+    %link{href: "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", rel: "stylesheet"}/
+    / Optional theme
+    %link{href: "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css", rel: "stylesheet"}/
+
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags 
+    = include_gon
+
+    - if Rails.env.production?
+      = render 'layouts/analytics' 
+
+    = render 'shared/backstrech'
+    = render 'shared/twitter_card'
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta content="Un taller paso a paso para aprender a hacer aplicaciones webs en menos de un mes" name="description">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    %script{src: "//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"}
+
+  %body
+    = render "shared/navbar"
+
+    .section#landing-section-main
+      .wrapper
+        - flash.each do |name, msg|
+          = content_tag(:div, msg, class: "alert alert-#{name}")
+      
+      .landing-box
+        %span{id:"_description7", itemprop:"description"}
+          %h1.landing-title= yield :title   
+          %h2.landing-subtitle{:style => 'color:#777'}=yield :uvp
+
+        
+        %iframe{allowfullscreen: "", frameborder: "0", height: "281", mozallowfullscreen: "", src: "//player.vimeo.com/video/96148825?title=0&byline=0&portrait=0", webkitallowfullscreen: "", width: "500"}
+
+        .cta{:style => 'margin-top:20px'}
+          -if current_user.nil?
+            
+            %a.btn.btn-lg.btn-success.landing-btn.landing-btn-intro{:href => new_user_registration_path} 
+              Empieza Gratis 
+              %i.glyphicon.glyphicon-check
+
+    .section#landing-section-uvp{:style => 'margin-top:20px; background-color:#fafafa; padding: 20px 0 20px 0'}
+      .container
+        .row
+          .col-md-3
+            .box.text-center          
+              %i.glyphicon.glyphicon-pencil{:style => 'color:#d94214; font-size:300%; margin:10px 0 10px 0'}
+              %h4{:style => 'margin-bottom:20px; font-family:Lato; font-size:170%'}
+                Proyectos reales
+              %p{:style => 'margin-top:10px; font-family:Lato;font-weight: 300'}
+                Podrás hacer sitios como Pinterest o Twitter utilizando las mismas herramientas que utilizan los expertos. 
+          
+          .col-md-3
+            .box.text-center
+              %i.glyphicon.glyphicon-play{:style => 'color:#d94214; font-size:300%; margin:10px 0 10px 0'}
+
+              %h4{:style => 'margin-bottom:20px; font-family:Lato; font-size:170%'}
+                Videos paso a paso
+              %p{:style => 'margin-top:10px; font-family:Lato;font-weight: 300'}
+                CONSTRUYE un proyecto desde 0, desde el front-end y diseño hasta el backend y manejo de bases de datos.
+
+          .col-md-3.text-center
+            .box.text-center
+              %i.glyphicon.glyphicon-calendar{:style => 'color:#d94214; font-size:300%; margin:10px 0 10px 0'}
+            
+              %h4{:style => 'margin-bottom:20px; font-family:Lato; font-size:170%'}
+                Sólo un mes
+              %p{:style => 'margin-top:10px; font-family:Lato;font-weight: 300'} De aquí a un mes no sólo puedes tener tu propia página web en línea sino también la de varios clientes.
+
+          .col-md-3.text-center
+            %i.glyphicon.glyphicon-copyright-mark{:style => 'color:#d94214; font-size:300%; margin:10px 0 10px 0'}
+
+            %h4{:style => 'margin-bottom:20px; font-family:Lato; font-size:170%'}           
+              Tu página.com
+            %p{:style => 'margin-top:10px; font-family:Lato;font-weight: 300'} Te enseñaremos a configurar los DNS's para tu sitio y de esta forma podrás tener páginas web .com
+
+    %section.text-center{:style => 'padding-top:40px; padding-bottom:30px; background-color:#eaeaea; border-bottom:solid 1px #eee; padding-bottom:50px'}
+      %h1{:style => 'font-family:Lato; font-weight:900; font-stretch: expanded; !important; font-size:280%'} EN UN MES CONSTRUYE TU APLICACIÓN WEB SOÑADA
+    
+    %section.text-center
+      %h2{:style => 'font-stretch: expanded; margin-top:60px; font-weight:900; font-size:300%; '}
+        Con Ruby on Rails
+      =image_tag("rails.jpg", :style => 'width:50%')
+
+    
+    %section{:style => 'padding-top:20px; padding-bottom:20px; background-color:#fff; border-bottom:solid 1px #eee;font-family:lato; font-weight:500; background-color:#fafafa;'}
+      .container
+        .row
+          .col-md-offset-3.col-md-6
+            %h2.page-header{:style => 'font-family:lato; font-weight:700'} En concreto lo que vas a aprender será:
+       
+            %p
+              A Construir una aplicación web usando: HTML5, CSS, Ruby on Rails, JavaScript, SQL Databases, Git, Heroku, todas tecnologías de punta. 
+            %p
+              A armar páginas web con capacidad de almacenar datos.
+            %p
+              Los secretos de Twitter Bootstrap 3 para hacer páginas web hermosas y en muy poco tiempo.
+            %p
+              Partirás desde
+              %strong 
+                cero, 
+              desde la instalación de rails hasta tener tu página publicada.
+
+            %p
+              ="Aprovecha esta oportunidad y comienza a aprender desde ya."
+
+            %a.btn.btn-lg.btn-warning.landing-btn.landing-btn-intro{:style => "white-space:normal; margin-top:10px; text-align:center", :href => new_user_registration_path} 
+              Empieza ya 
+              %i.glyphicon.glyphicon-check
+
+            %div{itemscope: "", itemref:"_name1 _role1 _url1 _organization1 _photo1", itemtype: "http://data-vocabulary.org/Person"}
+              %h4{:style => 'font-family:lato; font-weight:700; margin-top:20px'}
+                %span#_name1{itemprop:"name"}
+                  Gonzalo Sánchez
+                , 
+                %span#_role1{itemprop:"role"}
+                  fundador
+                de
+                %span#_url6{itemprop:"url"}
+                  %span#organization1{itemprop:"organization"}
+                    En1Mes.com 
+            
+              %p
+                =link_to("@gsanchezd", "https://twitter.com/gsanchezd", :style => 'color:#d94214')
+
+
+
+    //Testimonios
+    .section{:style => 'padding:40px; background-color:#E3EEEB;'}
+      .container
+        %h2{:style => 'text-align:center;'} Testimonios
+
+        .row
+          .col-md-2.col-md-offset-2.col-sm-2.col-sm-offset-2
+            =image_tag("test1.jpg", :class => 'img-circle img-responsive', :alt => 'Foto Mijael')
+
+          .col-md-6.col-sm-6
+            %p{:style => 'margin-top:30px'}="“Siempre pensé que programar era algo imposible y lo veía muy lejano. Con En1Mes en menos de un mes tengo mi aplicación online y hecha 100% por mí! Mi sueño hecho realidad!”"
+
+            %p CEO BOMBAcamp 
+
+            %a{:href => "https://twitter.com/mijafeldman", :target => "_blank", style:"color:#d94214"}= "Mijael Feldman"
+
+        .row{:style => 'margin-top:30px'}
+          #_review1{itemprop:"review", itemscope:"", itemtype:"http://schema.org/Review" }        
+            .col-md-2.col-md-offset-2.col-sm-2.col-sm-offset-2
+              =image_tag("test2.jpg", :class => 'img-circle img-responsive', :alt => 'Foto Sebastián')
+            .col-md-6.col-sm-6
+              %span{itemprop:"reviewBody"}
+                %p{:style => 'margin-top:30px'}
+                  ="“Cuando entré a En1Mes, me demoraba días en tener algún código funcional. Ahora con Ruby y Bootstrap en horas ya estoy viendo mi avance y con resultados gráficos de muy buena calidad.”"
+
+                %p CEO WolfLatam 
+                %span{itemprop:"author", itemscope:"", itemtype:"http://schema.org/Person"}
+
+                  %a{:href => "https://twitter.com/SParisiThompson", :target => "_blank", style:"color:#d94214"}  
+                    %span{itemprop:"name"} Sebastián Parisi
+        
+        .row{:style => 'margin-top:30px'}  
+          .col-md-2.col-md-offset-2.col-sm-2.col-sm-offset-2
+            =image_tag("test3.jpg", :class => 'img-circle img-responsive', :alt => 'Foto Rodrigo Pavez')
+          .col-md-6.col-sm-6
+            %p{:style => 'margin-top:30px'}  
+              ="“Tomé el curso porque quería emprender y no se puede emprender digitalmente sin entender bien como funciona el mundo digital ”"
+            %p Co-Founder Emprendimiento En bienestar
+    
+            %a{:href => "https://twitter.com/chinometal", :target => "_blank", style:"color:#d94214"}= "Rodrigo Pavez"
+
+
+    %section{:style => 'background-color:#fff; padding: 40px 0px 40px 0;'}
+      .container
+  
+        .row
+          .col-md-8.col-md-offset-2
+            %h3
+              ¿Curioso de que se puede lograr después de hacer este curso?
+            %h4
+              =link_to("Mira lo que han hecho algunos alumnos >>", casos_path, :style => 'font-size:130%; color:#d94214')
+      
+      
+    %section#faq{:style => 'background-color:rgb(250, 245, 234); padding:50px'}
+      .container
+        .row
+          .col-md-6.col-md-offset-3
+            %h2 Preguntas frecuentes
+            %h3 ¿Cuáles son los pre requisitos?
+            %p Este taller es para principiantes, lo que significa que no necesitas experiencia previa como desarrollador, ni entender conceptos avanzados, ni saber de matemáticas o utilizar programas complejos del computador.
+
+            %h3 ¿Qué materiales debo usar?
+            %p Necesitas un sólo computador, con el que podrás ir siguiendo el taller
+            
+            %h3 ¿Qué versiones de ruby on rails y ruby se utilizan?
+            %p De ruby se utiliza la versión 2.0 y de rails la versión 4.0
+
+            %h3 ¿Debo utilizar Mac o Windows?
+            %p El taller aplica tanto a OSX (Mac) como a Windows y Linux.
+            
+            %h3 Tienes alguna otra pregunta?
+
+            %p Siéntete libre de preguntar a Diego,encargado de alumnos.
+            %p= link_to("diego@en1mes.com", "mailto:diego@en1mes.com", style:"color:#d94214")
+
+  = yield
+
+  = render 'layouts/footer'
+
+

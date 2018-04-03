@@ -1,0 +1,126 @@
+.container
+  <h1> ¿Qué es HTML ? </h1>
+  <p> 
+  HTML es un lenguaje de marcas como estas < >.
+  </p>
+
+  <p>
+  Todas las instrucciones tienen la siguiente forma
+  </p>
+
+  <div class="well">
+  &lt;marca&gt; Contenido &lt;/marca&gt;
+  </div>
+
+  <p> 
+  Por ejemplo la marca p sirve para escribir párrafos.
+  </p>
+
+  <div class="well">
+  &lt;p&gt; Mi primer parrafo &lt;/p&gt; </p>
+  </div>
+
+  <p>
+  Una página HTML es un archivo que generalmente tiene como extensión los caracteres html. Por ejemplo podemos llamar a nuestra primer página con el nombre: pagina1.html y tanto si es un archivo en tu computador o en un servidor la puedes abrir en un navegador como chrome.
+  </p>
+
+  <hr>
+
+  <h2> Secciones de una página html </h2>
+
+  <p>
+  Una página HTML tiene dos secciones cabecera y cuerpo  
+  </p>
+
+  <div class="well">
+  &lt;html&gt; <br/> <br/> &lt;head&gt;<br/> cabeza<br/>  &lt;/head&gt;<br/><br/>  &lt;body&gt;<br/>  Cuerpo de la p&aacute;gina.<br/>  &lt;/body&gt; <br/> <br/> 
+  &lt;/html&gt;
+  </div>
+
+
+  <p>
+  Otros elementos HTML muy utilizados son para indicar los títulos, para esto contamos con los elementos:<br/>
+  <ul>
+  <li>&lt;h1&gt;</li>
+  <li>&lt;h2&gt;</li>
+  <li>&lt;h3&gt;</li>
+  <li>&lt;h4&gt;</li>
+  <li>&lt;h5&gt;</li>
+  <li>&lt;h6&gt;</li>
+  </ul>
+  </p>
+
+  <div class="well">
+  <h1 style='font-size:120%'> Yo soy un H1 y soy súper importante </h1>
+  <h2 style='font-size:110%'> Yo soy un H2 </h2>
+  <h3 style='font-size:100%'> Yo soy un H3 </h3>
+  <h6 style='font-size:90%'> Yo soy un miserable H6, la verdad es que nadie me usa </h6>
+
+  </div>
+
+  <p>
+  El título de mayor nivel es &lt;h1&gt;, es decir el que tienen una fuente mayor (veremos que es el navegador el responsable de definir el tamaño de la fuente, más adelante podrá ver que uno puede modificar la fuente, tamaño, color etc.)
+  </p>
+
+  <p>
+  Según la importancia del título utilizaremos alguno de estos elementos HTML. Requiere la marca de cerrado del título con la barra invertida como hemos visto.
+  </p>
+
+  <p>
+  Confeccionaremos una página que contenga un título de primer nivel &lt;h1&gt;, y luego dos títulos de nivel &lt;h2&gt;,. Definiremos un párrafo para cada título de segundo nivel.
+  </p>
+
+  <hr>
+
+  <h2> Vínculos (links) </h2>
+  <p>
+  El elemento más importante que tiene una página de internet es el hipervínculo, estos nos permiten cargar otra página en el navegador. Esto es lo que hace diferente la página de un libro con la página de un sitio en internet. Normalmente un libro lo recorremos en forma secuencial, pero un sitio de internet podemos disponer estos enlaces entre un conjunto de páginas y luego tener distintas alternativas de recorrido.
+  </p>
+
+  <p>
+  Normalmente un navegador al encontrar esta marca muestra un texto subrayado, y al hacer clic con el mouse sobre éste el navegador carga la página indicada por dicho hipervínculo. </p>
+
+  <p>
+  Primero veremos cual es la sintaxis para disponer un hipervínculo a una página que se encuentra en el mismo sitio (es decir otra página que hemos desarrollado nosotros).
+  </p>
+
+  <p>
+  La marca de hipervínculo a otra página del mismo sitio tiene la siguiente sintaxis:
+  </p>
+
+  <div class="well">
+  <a href="pagina2.html">Noticias</a>
+  </div>
+
+  <p>
+  &lt;a&gt; viene de anchor que significa ancla.
+  <p>
+
+  <p>
+  Como vemos, se trata de otro elemento HTML que tiene comienzo de marca y fin de marca. Lo que se encuentra entre el comienzo de marca y el fin de la marca es el texto que aparece en la página (normalmente subrayado).
+  </p>
+
+  <p>
+  Lo nuevo que aparece en este elemento es el concepto de una propiedad. Una propiedad se incorpora en el comienzo de una marca y tiene un nombre y un valor.
+  </p>
+  <p>
+  El valor de la propiedad debe ir entre comillas, y hace referencia a la página que debe mostrar el navegador si el visitante hace clic sobre el hipervínculo.
+  </p>
+
+  <p>
+  Implementemos dos páginas que contengan hipervínculos entre si, los nombres de las páginas HTML serán: pagina1.html y pagina2.html
+  </p>
+
+  <div class="well">
+  <br/>pagina1.html<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>&lt;h1&gt;P&aacute;gina principal.&lt;/h1&gt;<br/>&lt;a href=&quot;pagina2.html&quot;&gt;Noticias&lt;/a&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/>pagina2.html<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>&lt;h1&gt;Noticias.&lt;/h1&gt;<br/>&lt;a href=&quot;pagina1.html&quot;&gt;Salir.&lt;/a&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+  </div>
+
+  Resultado:
+  <div class="well">
+  <a href="pagina2.html">Noticias</a>
+  </div>
+
+  <p>
+  El valor de la propiedad href en este caso es pagina2.html (es otro archivo HTML que debe encontrarse en nuestro sitio y en el mismo directorio).
+  </p>
+

@@ -1,0 +1,59 @@
+.container{:style => 'padding:100px; text-align:center'}
+  %h1 Guía de 3 Pasos para escoger el mejor curso para ti.
+
+// Paginas web completamente personalizadas y responsivas
+.section-box{:style => 'padding:40px; background-color:#F7F7EC;'}
+  .container
+    %h2{:style => ' font-family:Lato; font-weight:300'} ¿Quieres crear páginas web muy personalizadas y completemente a tu gusto pero simultaneamente que sean responsivas?
+    .row
+      .col-md-6
+        %section#imagebox3.imagebox{:style => 'margin-top:20px'}
+          =link_to(image_tag("9-presencial-html.jpg", :class => 'img-responsive'), "http://desafiostgo.en1mes.com/")
+          #slidingbox3.slidingbox
+            %h4 Aprende el código que hay detrás de las páginas web.                  
+            %p Con este curso pensando para diseñadores gráficos podrás construir páginas web desde cero y tener la capacidad de modificarlas cuando quieras.
+      .col-md-6
+        %section#imagebox6.imagebox{:style => 'margin-top:20px'}
+          =link_to(image_tag("4-online-html.jpg", :class => 'img-responsive'), 'http://html5.en1mes.com/')
+          #slidingbox6.slidingbox
+            %h4 HTML online
+            %p  Aprende a hacer y maquetear páginas responsivas web con HTML, CSS y Bootstrap
+
+
+
+// Paginas web autoadministrables
+.section{:style => 'padding:50px; background-color:#fff'}   
+  .container
+    %h2{:style => ' font-family:Lato; font-weight:300'} Quieres entregarles a tus clientes páginas web autoadministrables?
+    .row
+      .col-md-6
+        %section#imagebox7.imagebox{:style => 'margin-top:20px'}
+          =link_to(image_tag("10-online-wordpress.jpg", :class => 'img-responsive'), 'http://wponline.en1mes.com/')
+          #slidingbox7.slidingbox
+            %h4 Wordpress Online
+            %p Aprende a crear páginas web autoadministrables y blogs con todo el poder de Wordpress 
+      .col-md-6
+        %section#imagebox8.imagebox{:style => 'margin-top:20px'}
+          =link_to(image_tag("8-presencial-wordpress.jpg", :class => 'img-responsive'), 'http://wordpress.en1mes.com/')
+          #slidingbox8.slidingbox
+            %h4 Wordpress Presencial
+            %p Aprende a crear páginas web autoadministrables y blogs con todo el poder de Wordpress             
+
+.section{:style => 'padding:50px; background-color:#F7F7EC'}
+  .container
+    %h2 ¿Quieres emprender con un proyecto?
+    %h3 y construir aplicaciones como Twitter o Pinterest
+    .row
+      .col-md-6
+        %section#imagebox2.imagebox{:style => 'margin-top:20px'}
+          =link_to(image_tag("2-presencial-rails-b.jpg", :class => 'img-responsive'), "http://ror4.en1mes.com")
+          #slidingbox2.slidingbox
+            %h4 Construye aplicaciones web con Ruby on rails.                      
+            %p Aprenderás construyendo un Pinterest, con este curso podrás construir prototipos digitales de forma muy rápida para validar tus proyectos.
+
+      .col-md-6
+        %section#imagebox5.imagebox{:style => 'margin-top:20px'}  
+          =link_to(image_tag("5-online-rails.jpg", :class => 'img-responsive'), home_path);
+          #slidingbox5.slidingbox
+            %h4 Ruby on Rails online                          
+            %p Construye aplicaciones web desde la comidad de tu casa

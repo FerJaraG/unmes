@@ -1,0 +1,8 @@
+.row{:style => 'margin-top:20px'}
+	.col-md-5.col-md-offset-1
+		=link_to(image_tag(img, :class => 'img-responsive img-rounded'), link, :target => 'blank')
+	.col-md-6
+		%p{:style => 'margin-top:20px'}
+			=link_to(project, link, :target => 'blank')
+		%p
+			=name
