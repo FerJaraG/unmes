@@ -17,7 +17,7 @@ development:
   database: en1mes
   pool: 5
   username: fernanda
-  password: 123456
+  password: 
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
