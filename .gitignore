@@ -17,4 +17,3 @@ doc/
 .idea
 .env
 config/secrets.yml
-config/database.yml

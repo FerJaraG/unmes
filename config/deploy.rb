@@ -3,7 +3,7 @@ lock '3.6.1'
         
 set :user                    , 'deploy'
 set :application             , 'unmes'
-set :deploy_to               , "/home/#{fetch(:user)}/Desktop/#{fetch(:application)}"
+set :deploy_to               , "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 set :scm                     , :git
 set :repo_url                , 'git@github.com:FerJaraG/unmes.git'
 set :keep_releases           , 5

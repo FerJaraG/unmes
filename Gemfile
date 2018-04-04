@@ -27,6 +27,7 @@ gem 'pg'
 
 group :production do
   gem 'rails_12factor'
+
 end
 
 group :development do 
@@ -41,7 +42,7 @@ group :development do
 end
 
 group :development, :test do
-  #gem 'sqlite3'
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'spring'
   gem 'better_errors'
