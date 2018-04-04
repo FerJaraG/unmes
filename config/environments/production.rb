@@ -78,4 +78,6 @@ Unmes::Application.configure do
 
   # In production, :host should be set to the actual host of your application.
   config.action_mailer.default_url_options = { :host => 'www.en1mes.com' }
+
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
 end
