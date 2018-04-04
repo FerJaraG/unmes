@@ -16,4 +16,4 @@ doc/
 .DS_Store
 .idea
 .env
-config/secrets.yml
+
