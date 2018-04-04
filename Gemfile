@@ -25,6 +25,7 @@ gem 'mandrill-api'
 gem "sass-rails", "4.0.2"
 gem 'pg'
 gem 'uglifier'
+gem 'dotenv-rails'
 
 group :production do
   gem 'rails_12factor'
@@ -32,7 +33,6 @@ group :production do
 end
 
 group :development do 
-  gem 'dotenv-rails'
   gem 'binding_of_caller'
   gem 'capistrano', '3.6.1', require: false
   gem 'capistrano-bundler', require: false
