@@ -278,6 +278,8 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uglifier (4.1.8)
+      execjs (>= 0.3.0, < 3)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -319,6 +321,7 @@ DEPENDENCIES
   social-share-button
   spring
   sqlite3
+  uglifier
 
 RUBY VERSION
    ruby 2.1.2p95

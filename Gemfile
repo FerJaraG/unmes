@@ -24,6 +24,7 @@ gem 'rest-client' #for sending mails with mailgun
 gem 'mandrill-api'
 gem "sass-rails", "4.0.2"
 gem 'pg'
+gem 'uglifier'
 
 group :production do
   gem 'rails_12factor'
