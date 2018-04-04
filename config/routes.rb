@@ -3,7 +3,7 @@ Unmes::Application.routes.draw do
   get 'payments/pay'
   get 'pages/involve', :as => 'involve' 
 
-  root :to => 'pages#cursos'
+  root :to => "pages#cursos"
 
   resources :courses do
     resources :leads, :only => [:new, :create]
