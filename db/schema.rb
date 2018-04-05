@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(version: 20140825185626) do
     t.integer  "author_id"
     t.string   "author_type"
     t.text     "body"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "namespace"
   end
 
   add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
-  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_admin_notes_on_resource_type_and_resource_id", using: :btree
+  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
   create_table "admin_users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 20140825185626) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(version: 20140825185626) do
 
   create_table "chapters", force: true do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "course_id"
     t.integer  "place"
   end
@@ -61,8 +61,8 @@ ActiveRecord::Schema.define(version: 20140825185626) do
     t.integer  "user_id"
     t.integer  "workshop_id"
     t.integer  "q"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "courses", force: true do |t|
@@ -87,8 +87,8 @@ ActiveRecord::Schema.define(version: 20140825185626) do
     t.string   "name"
     t.string   "telephone"
     t.string   "phone"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "promotional_code"
     t.string   "email"
   end
@@ -104,8 +104,8 @@ ActiveRecord::Schema.define(version: 20140825185626) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                                    null: false
-    t.datetime "updated_at",                                    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "phone"
     t.boolean  "online"
     t.string   "funnel"
@@ -122,8 +122,8 @@ ActiveRecord::Schema.define(version: 20140825185626) do
   create_table "workshops", force: true do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.text     "content"
     t.integer  "place"
     t.boolean  "public",      default: false

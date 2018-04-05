@@ -16,8 +16,7 @@ development:
   encoding: unicode
   database: en1mes
   pool: 5
-  username: fernanda
-  password: 
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -33,3 +32,4 @@ production:
   database: en1mes
   pool: 5
   timeout: 5000
+  password: 123Vamoscontodo
