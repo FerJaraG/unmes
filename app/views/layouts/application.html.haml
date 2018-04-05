@@ -4,31 +4,31 @@
     = favicon_link_tag "#{asset_path('favicon.ico')}"
     = favicon_link_tag "#{asset_path('favicon.ico')}", rel: 'apple-touch-icon', type: 'image/png'
 
-    %title= content_for?(:page_title) ? yield(:page_title) : "En 1 mes" 
+    %title= content_for?(:page_title) ? yield(:page_title) : "En 1 mes"
 
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
     / Optional theme
-    %link{href: "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css", rel: "stylesheet"}/
+    %link{href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css", rel: "stylesheet"}/
 
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
     = include_gon
 
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
 
     :css
       h1, h2, label{
-        font-family: 'Roboto Slab', serif; 
+        font-family: 'Roboto Slab', serif;
       }
 
 
     - if Rails.env.production?
-      = render 'layouts/analytics' 
+      = render 'layouts/analytics'
 
     = render 'shared/twitter_card'
 
@@ -38,12 +38,12 @@
 
     = yield :javascript
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
 
 
   %body{:style => "padding-top:0px"}
     = render 'shared/navbar'
-    
+
 
     .wrapper{:style => 'text-align:center'}
       - flash.each do |name, msg|
