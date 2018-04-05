@@ -11,17 +11,18 @@
         %span{itemref: "_review1 _url6 _description7 _image8", itemscope: "", itemtype: "http://schema.org/Product"}
 
           %span{itemprop:"name"}
-            %img.navbar-brand-icon{alt: "En 1 Mes", src: "/assets/logo.png", :style => 'height:40px; margin-right:10px; margin-top:-7px; color:white', :class => '', :itemprop=>"logo"}/
-            %span.brand-text
-              En 1 Mes 
+            = image_tag "logo.png", class: "navbar-brand-icon", alt: "En 1 Mes", style: "height: 40px; margin-right: 10px; margin-top: -7px; color: white;", itemprop: "logo"
 
-          %span{itemprop: "brand", itemscope: "", itemtype: "http://schema.org/Brand"}      
+            %span.brand-text
+              En 1 Mes
+
+          %span{itemprop: "brand", itemscope: "", itemtype: "http://schema.org/Brand"}
     / Collect the nav links, forms, and other content for toggling
 
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav.pull-right
 
-        %li= link_to("INVOLÚCRATE", involve_path) 
+        %li= link_to("INVOLÚCRATE", involve_path)
         - if user_signed_in?
           %li= link_to "MIS CURSOS", my_courses_courses_path
           %li.dropdown
@@ -30,8 +31,8 @@
               %span.caret
             %ul.dropdown-menu{role: "menu"}
               %li= link_to "Perfil", edit_user_registration_path
-              %li= link_to "Cerrar Sessión", destroy_user_session_path, method: :delete      
-         
+              %li= link_to "Cerrar Sessión", destroy_user_session_path, method: :delete
+
         - else
           %li= link_to "REGÍSTRATE", new_user_registration_path
           %li= link_to "INGRESO", user_session_path
