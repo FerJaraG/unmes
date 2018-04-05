@@ -33,3 +33,4 @@ production:
   database: en1mes
   pool: 5
   timeout: 5000
+  password: 123Vamoscontodo
